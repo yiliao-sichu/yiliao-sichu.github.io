@@ -30,13 +30,13 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/favicon.ico">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
 
 
     
@@ -101,19 +101,19 @@
             <div class="navbar-start">
                 
                 <a class="navbar-item"
-                href="/">Home</a>
+                href="/">主页</a>
                 
                 <a class="navbar-item"
-                href="/archives">Archives</a>
+                href="/archives">归档</a>
                 
                 <a class="navbar-item"
-                href="/categories">Categories</a>
+                href="/categories">分类</a>
                 
                 <a class="navbar-item"
-                href="/tags">Tags</a>
+                href="/tags">标签</a>
                 
                 <a class="navbar-item"
-                href="/about">About</a>
+                href="/about">关于</a>
                 
             </div>
             
@@ -185,6 +185,10 @@
         
         
         
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
     </div>
 </div>
 
@@ -196,28 +200,13 @@
         <div class="buttons is-centered">
             
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/ead.jpeg" alt="Wechat"></div>
+</a>
 
                 
         </div>
@@ -227,6 +216,27 @@
 
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'xxxxxxxx',
+        app_key: 'xxxxxxxx',
+        placeholder: 'xxxxxxxx'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -243,22 +253,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/avatar.png" alt="MuXi">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        MuXi
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        Pray 4 My Sins.
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>湖南 湘潭</span>
                     </p>
                     
                 </div>
@@ -268,7 +278,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Entrada
+                        Post
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -278,7 +288,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -288,7 +298,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Etiquetas
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -297,8 +307,8 @@
             </div>
         </nav>
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
-                SEGUIR</a>
+            <a class="level-item button is-link is-rounded" href="http://wpa.qq.com/msgrd?v=3&amp;uin=603885801&amp;site=qq&amp;menu=yes" target="_blank">
+                Follow</a>
         </div>
         
         
@@ -314,28 +324,21 @@
             <a class="level-item button is-white is-marginless" target="_blank"
                 title="Facebook" href="https://facebook.com">
                 
-                <i class="fab fa-facebook"></i>
+                <i class="fas fa-book"></i>
                 
             </a>
             
             <a class="level-item button is-white is-marginless" target="_blank"
                 title="Twitter" href="https://twitter.com">
                 
-                <i class="fab fa-twitter"></i>
+                <i class="fas fa-envelope"></i>
                 
             </a>
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Dribbble" href="https://dribbble.com">
+                title="微信公众号" href="https://dribbble.com">
                 
-                <i class="fab fa-dribbble"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
+                <i class="fab fa-weixin"></i>
                 
             </a>
             
@@ -368,12 +371,23 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://www.xiefayang.com/" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">PPOffice</span>
+                        <span class="level-item">i蝸居年華_谢谢谢</span>
                     </span>
                     <span class="level-right">
-                        <span class="level-item tag">github.com</span>
+                        <span class="level-item tag">www.xiefayang.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://www.toutiao.com/c/user/99362292158/#mid=1602143680853005" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Gorhaf</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.toutiao.com</span>
                     </span>
                 </a>
             </li>
@@ -390,7 +404,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Categories
             </h3>
             <ul class="menu-list">
             
@@ -408,7 +422,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -437,32 +451,8 @@
             <div class="card widget">
     <div class="card-content">
         <div class="menu">
-        <h3 class="menu-label">
-            Archivos
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/09/">
-                <span class="level-start">
-                    <span class="level-item">September 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -486,7 +476,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -515,32 +505,8 @@
         <div class="card widget">
     <div class="card-content">
         <div class="menu">
-        <h3 class="menu-label">
-            Archivos
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/09/">
-                <span class="level-start">
-                    <span class="level-item">September 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -728,10 +694,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
