@@ -9,11 +9,12 @@
         }
     });
 
-    if (typeof (moment) === 'function') {
-        $('.article-meta time').each(function () {
-            $(this).text(moment($(this).attr('datetime')).fromNow());
-        });
-    }
+    // 显示前几天 注释以下代码显示为日期 
+    // if (typeof (moment) === 'function') {
+    //     $('.article-meta time').each(function () {
+    //         $(this).text(moment($(this).attr('datetime')).fromNow());
+    //     });
+    // }
 
     $('.article > .content > table').each(function () {
         if ($(this).width() > $(this).parent().width()) {

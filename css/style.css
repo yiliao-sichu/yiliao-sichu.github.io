@@ -57,6 +57,9 @@ textarea {
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1);
 }
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1);
+}
 .card + .card,
 .card + .column-right-shadow {
   margin-top: 1.5rem;
@@ -77,7 +80,7 @@ img.thumbnail {
 }
 .navbar-logo img,
 .footer-logo img {
-  max-height: 1.75rem;
+  max-height: 2.38rem;
 }
 .navbar-main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -106,7 +109,7 @@ img.thumbnail {
 .navbar-main .navbar-item {
   display: flex;
   align-items: center;
-  padding: 1.25rem 0.75rem;
+  padding: 0.89rem 0.75rem;
 }
 .navbar-main .navbar-item.is-active {
   color: #3273dc;
@@ -139,11 +142,11 @@ img.thumbnail {
 .widget .menu-list li ul {
   margin-right: 0;
 }
+.widget .menu-list a {
+  transition: background-color 0.3s ease-in-out;
+}
 .widget .menu-list a.level {
   display: flex;
-}
-.widget .has-text-centered figure.image {
-  margin: auto;
 }
 .pagination .pagination-link:not(.is-current),
 .pagination .pagination-previous,
@@ -324,6 +327,7 @@ img.thumbnail {
 }
 .has-mb-6 {
   margin-bottom: 0.5em !important;
+  border-radius: 50%;
 }
 .has-mr-7 {
   margin-right: 0.25em !important;
@@ -391,8 +395,8 @@ img.thumbnail {
 }
 .content code,
 .content pre {
-  font-size: 0.85em;
-  font-family: "Source Code Pro", monospace, "Microsoft YaHei";
+  font-size: 0.937em;
+  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 .content code {
   color: #ff3860;
@@ -520,4 +524,37 @@ figure.highlight .section {
 }
 .gist .file {
   all: initial;
+}
+.post-copyright {
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  word-break: break-all;
+  margin: 2.5rem 0 0;
+  padding: 1rem 1rem;
+  border-left: 3px solid #03a9f4;
+  background-color: #f9f9f9;
+}
+.article {
+  counter-reset: section;
+}
+.article h2 {
+  counter-reset: sub-section;
+}
+.article h3 {
+  counter-reset: composite;
+}
+.article h4 {
+  counter-reset: detail;
+}
+.article h2:before {
+  content: counter(section) " ";
+  counter-increment: section;
+}
+.article h3:before {
+  content: counter(section) "." counter(sub-section) " ";
+  counter-increment: sub-section;
+}
+.article h4:before {
+  content: counter(section) "." counter(sub-section) "." counter(composite) " ";
+  counter-increment: composite;
 }
